@@ -10,6 +10,11 @@ A full-stack collaborative task management web application built with Node.js, E
 - **Dashboard** – Total tasks, tasks by status, tasks per user, overdue task count
 - **Role-Based Access** – Admins manage everything; Members can only view and update their assigned tasks
 
+## Live Demo
+- **App:** https://authentic-blessing-production-0cad.up.railway.app
+- **GitHub:** https://github.com/ANSH-PANT/Ethara.AI
+
+
 ---
 
 ## Tech Stack
@@ -34,7 +39,7 @@ A full-stack collaborative task management web application built with Node.js, E
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ANSH-PANT/Ethara.AI
 cd team-task-manager
 ```
 
@@ -43,7 +48,6 @@ cd team-task-manager
 ```bash
 cd backend
 cp .env.example .env
-# Edit .env with your PostgreSQL connection string and a JWT secret
 npm install
 npx prisma migrate deploy    # or: npx prisma db push (for first-time setup)
 npm run dev
@@ -78,7 +82,7 @@ FRONTEND_URL="http://localhost:5173"
 ### Frontend (`frontend/.env`)  *(production only)*
 
 ```
-VITE_API_URL="https://your-railway-backend-url/api"
+VITE_API_URL="https://authentic-blessing-production-0cad.up.railway.app"
 ```
 
 ---
