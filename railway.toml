@@ -1,5 +1,5 @@
 [build]
-buildCommand = "npm install && npm run db:generate"
+buildCommand = "npm install --include=dev && npm run db:generate"
 
 [deploy]
 startCommand = "node src/server.js"
