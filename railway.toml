@@ -1,6 +1,7 @@
 [build]
-buildCommand = "cd frontend && npm install && npm run build && cd ../backend && npm install && npx prisma generate"
+buildCommand = "npx prisma generate"
 
 [deploy]
-startCommand = "cd backend && npx prisma db push --skip-generate && node src/server.js"
+startCommand = "node src/server.js"
+preDeployCommand = "npx prisma db push --skip-generate"
 healthcheckPath = "/api/auth/me"
