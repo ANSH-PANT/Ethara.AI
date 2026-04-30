@@ -3,3 +3,4 @@ buildCommand = "cd frontend && npm install && npm run build && cd ../backend && 
 
 [deploy]
 startCommand = "cd backend && npx prisma db push --skip-generate && node src/server.js"
+healthcheckPath = "/api/auth/me"
