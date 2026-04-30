@@ -1,7 +1,7 @@
 [build]
-buildCommand = "npm install --prefix backend --include=dev && backend/node_modules/.bin/prisma generate --schema backend/prisma/schema.prisma"
+buildCommand = "npm install --include=dev && npx prisma generate"
 
 [deploy]
-startCommand = "node backend/src/server.js"
-preDeployCommand = "backend/node_modules/.bin/prisma db push --schema backend/prisma/schema.prisma --skip-generate"
+startCommand = "node src/server.js"
+preDeployCommand = "npx prisma db push --skip-generate"
 healthcheckPath = "/health"
