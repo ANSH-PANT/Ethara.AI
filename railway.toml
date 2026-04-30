@@ -1,7 +1,7 @@
 [build]
-buildCommand = "npx prisma generate"
+buildCommand = "npm install && npm run db:generate"
 
 [deploy]
 startCommand = "node src/server.js"
-preDeployCommand = "npx prisma db push --skip-generate"
+preDeployCommand = "npm run db:push"
 healthcheckPath = "/health"
